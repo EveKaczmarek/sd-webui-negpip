@@ -70,7 +70,7 @@ class Script(modules.scripts.Script):
 
     def ui(self, is_img2img):
         with InputAccordion(False, label=self.title()) as active:
-                toggle = gr.Button(elem_id="switch_default", value=f"Toggle startup with Active(Now:{startup_i if is_img2img else startup_t})", variant="primary")
+            toggle = gr.Button(elem_id="switch_default", value=f"Toggle startup with Active(Now:{startup_i if is_img2img else startup_t})", variant="primary")
 
         def f_toggle(is_img2img):
             key = NEGPIP_I if is_img2img else NEGPIP_T
